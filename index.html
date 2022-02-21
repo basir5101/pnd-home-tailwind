@@ -4,34 +4,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        danger: '#da373d',
-                        success: '#28a745',
-                        successHover: '#247127'
-                    }
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-          .content-auto {
-            content-visibility: auto;
-          }
-        }
-      </style>
+    <link href="./index.css" rel="stylesheet">
 </head>
 
 <body>
     <div>
+
+        <!-- Navbar -->
+        <div class="ud-header bg-gray-200 absolute  top-0  left-0  z-40 w-full flex items-center">
+            <div class="container">
+                <div class="flex -mx-4 items-center justify-between relative">
+                    <div class="px-4 w-60 max-w-full">
+                        <a href="index.html" class="navbar-logo w-full block py-5">
+                            <img src="./images/logo.png" alt="logo" class="w-full header-logo" />
+                        </a>
+                    </div>
+                    <div class="flex px-2 justify-between items-center w-full">
+                        <div>
+                            <button id="navbarToggler"
+                                class="block absolute right-4 top-1/2 -translate-y-1/2 px-3 lg:hidden focus:ring-2 ring-primary py-[6px]  rounded-lg">
+
+                                <i class="fa text-4xl fa-navicon text-gray-500"></i>
+                            </button>
+                            <nav id="navbarCollapse"
+                                class=" absolute  py-5 lg:py-0 lg:px-4 xl:px-6 bg-white lg:bg-transparent shadow-lg rounded-lg max-w-[250px] w-full lg:max-w-full lg:w-full right-4 top-full hidden lg:block lg:static lg:shadow-none ">
+                                <ul class="blcok lg:flex">
+                                    <li class="relative group submenu-item">
+                                        <a href="#home"
+                                            class=" ud-menu-scroll text-base text-dark lg:group-hover:opacity-70  font-semibold group-hover:text-gray-900 lg:py-6 lg:inline-flex lg:px-0 flex mx-8 lg:mr-0 ">
+                                            <i class="fa fa-home text-lg mr-1 text-gray-600 "></i>
+                                            Drawing
+                                            Store <i class="fa fa-arrow-down text-gray-600 m-2"></i>
+                                        </a>
+                                        <div
+                                            class=" submenu  hidden relative lg:absolute w-[300px] top-full lg:top-[110%] left-0 rounded-sm lg:shadow-lg p-4 lg:block lg:opacity-0 lg:invisible group-hover:opacity-100 lg:group-hover:visible lg:group-hover:top-full bg-white transition-[top] duration-300 ">
+                                            <div>
+                                                <div class="text-center hover:bg-gray-200">
+                                                    <a href="#" class="text-base text-center font-semibold">
+                                                        <i class="fa fa-home text-gray-600 mx-2 py-2"></i> All
+                                                        Drawings<a />
+                                                </div>
+
+                                                <hr>
+                                                <div class="flex">
+                                                    <div>
+                                                        <a href="about.html"
+                                                            class="block text-base hover:bg-gray-200 font-semibold text-body-color rounded  hover:text-primary py-[10px] px-4">
+                                                            About Page
+                                                        </a>
+                                                        <a href="pricing.html"
+                                                            class="block text-base font-semibold text-body-color hover:bg-gray-200 rounded  hover:text-primary py-[10px] px-4">
+                                                            Pricing Page
+                                                        </a>
+                                                    </div>
+                                                    <div>
+                                                        <a href="about.html"
+                                                            class="block text-base font-semibold text-body-color hover:bg-gray-200 rounded  hover:text-primary py-[10px] px-4">
+                                                            About Page
+                                                        </a>
+                                                        <a href="pricing.html"
+                                                            class="block text-base font-semibold text-body-color hover:bg-gray-200 rounded  hover:text-primary py-[10px] px-4">
+                                                            Pricing Page
+                                                        </a>
+
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="text-center hover:bg-gray-200">
+                                                    <a href="#" class="text-base text-center font-semibold">
+                                                        <i class="fa fa-home text-gray-600 mx-2 py-2"></i> All
+                                                        Drawings<a />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="relative group group inline-block">
+                                        <a href="#home"
+                                            class=" ud-menu-scroll text-base text-dark lg:group-hover:opacity-70  font-semibold group-hover:text-gray-900 lg:py-6 lg:inline-flex lg:px-0 flex mx-8 lg:mr-0 ">
+                                            Drawing Store <i class="fa fa-arrow-down text-gray-600 mx-2 py-2"></i>
+                                        </a>
+                                        <div
+                                            class=" submenu  hidden relative lg:absolute w-[250px] top-full lg:top-[110%] left-0 rounded-sm lg:shadow-lg p-4 lg:block lg:opacity-0 lg:invisible group-hover:opacity-100 lg:group-hover:visible lg:group-hover:top-full bg-white transition-[top] duration-300 ">
+                                            <div>
+
+                                                <div>
+                                                    <a href="#"
+                                                        class="block text-base font-semibold text-body-color hover:bg-gray-200 rounded  hover:text-primary py-[10px] px-4">
+                                                        <i class="fa fa-home text-gray-600 mx-2 py-2"></i> All
+                                                        Drawings<a />
+                                                </div>
+                                                <hr>
+                                                <div>
+                                                    <a href="about.html"
+                                                        class="block text-base font-semibold text-body-color rounded  hover:text-primary py-[10px] px-4">
+                                                        <i class="fa fa-home text-gray-600 mx-2 py-2"></i> About Page
+                                                    </a>
+                                                    <a href="pricing.html"
+                                                        class="block text-base font-semibold text-body-color rounded  hover:text-primary py-[10px] px-4">
+                                                        <i class="fa fa-home text-gray-600 mx-2 py-2"></i> Pricing Page
+                                                    </a>
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="relative group">
+                                        <a href="#home"
+                                            class=" ud-menu-scroll text-base text-dark lg:group-hover:opacity-70  font-semibold group-hover:text-gray-900 lg:py-6 lg:inline-flex lg:px-0 flex mx-8 lg:mr-0 ">
+                                            Drawing Store <i class="fa fa-arrow-down text-gray-600 mx-2 py-2"></i>
+                                        </a>
+                                        <div
+                                            class=" submenu  hidden relative lg:absolute w-[250px] top-full lg:top-[110%] left-0 rounded-sm lg:shadow-lg p-4 lg:block lg:opacity-0 lg:invisible group-hover:opacity-100 lg:group-hover:visible lg:group-hover:top-full bg-white transition-[top] duration-300 ">
+                                            <div>
+
+                                                <div>
+                                                    <a href="#"
+                                                        class="block text-base font-semibold text-body-color rounded  hover:text-primary py-[10px] px-4">
+                                                        <i class="fa fa-home text-gray-600 mx-2 py-2"></i> All
+                                                        Drawings<a />
+                                                </div>
+                                                <hr>
+                                                <div>
+                                                    <a href="about.html"
+                                                        class="block text-base font-semibold text-body-color rounded  hover:text-primary py-[10px] px-4">
+                                                        <i class="fa fa-home text-gray-600 mx-2 py-2"></i> About Page
+                                                    </a>
+                                                    <a href="pricing.html"
+                                                        class="block text-base font-semibold text-body-color rounded  hover:text-primary py-[10px] px-4">
+                                                        <i class="fa fa-home text-gray-600 mx-2 py-2"></i> Pricing Page
+                                                    </a>
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="relative group">
+                                        <a href="#contact"
+                                            class="ud-menu-scroll text-base text-dark  lg:group-hover:opacity-70 group-hover:text-gray-900 py-2 lg:py-6 lg:inline-flex lg:px-0 flex mx-8 lg:mr-0 lg:ml-7 xl:ml-12 font-semibold">
+                                            Videos
+                                        </a>
+                                    </li>
+                                    <li class="relative group">
+                                        <a href="#contact"
+                                            class="ud-menu-scroll text-base text-dark  lg:group-hover:opacity-70 group-hover:text-gray-900 py-2 lg:py-6 lg:inline-flex lg:px-0 flex mx-8 lg:mr-0 lg:ml-7 xl:ml-12 font-semibold">
+                                            Build Your Portfolio
+                                        </a>
+                                    </li>
+                                    <li class="relative group group inline-block">
+                                        <a href="#home"
+                                            class=" ud-menu-scroll text-base text-dark lg:group-hover:opacity-70  font-semibold group-hover:text-gray-900 lg:py-6 lg:inline-flex lg:px-0 flex mx-8 lg:mr-0 ">
+                                            Signup <i class="fa fa-arrow-down text-gray-600 mx-2 py-2"></i>
+                                        </a>
+                                        <div
+                                            class=" submenu  hidden relative lg:absolute w-[250px] top-full lg:top-[110%] left-0 rounded-sm lg:shadow-lg p-4 lg:block lg:opacity-0 lg:invisible group-hover:opacity-100 lg:group-hover:visible lg:group-hover:top-full bg-white transition-[top] duration-300 ">
+                                            <div>
+                                                <div>
+                                                    <a href="about.html"
+                                                        class="block text-base font-semibold text-body-color rounded  hover:text-primary py-[10px] px-4">
+                                                        <i class="fa fa-home text-gray-600 mx-2 py-2"></i> Login
+                                                    </a>
+                                                    <a href="pricing.html"
+                                                        class="block text-base font-semibold text-body-color rounded  hover:text-primary py-[10px] px-4">
+                                                        <i class="fa fa-home text-gray-600 mx-2 py-2"></i> Signup
+                                                    </a>
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="sm:flex justify-end alig hidden pr-16 lg:pr-0">
+                            <ul>
+
+                                <li class="relative  group group inline-block">
+                                    <input type="text"
+                                        class="bg-none mt-2 border   text-gray-900 text-sm rounded-lg  block w-full p-2"
+                                        placeholder="Search">
+                                    <button
+                                        class="border border-successHover bg-white px-6 hover:text-white transition py-2 rounded-lg hover:bg-successHover">Search</button>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Products -->
-        <div class="py-5 md:px-8 lg:px-10 text-center">
+        <div class="py-5 mt-24 md:px-8 lg:px-10 text-center">
             <h1 class="text-center text-3xl font-bold">Products</h1>
             <p class="text-center my-3">Browse through awesome drawings and design inspirations. And, dont forget to
                 watch our viral videos.</p>
@@ -97,6 +266,7 @@
                 Get Started
             </button>
         </div>
+
 
         <!-- Categories -->
         <div class="bg-gray-100 mx-auto px-10 py-4">
@@ -378,6 +548,7 @@
                 </button>
             </div>
         </div>
+
         <!-- Design Inspirations -->
         <div class="bg-gray-200">
             <div class="container lg:w-9/12 mx-auto">
@@ -562,6 +733,7 @@
         </div>
 
     </div>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
